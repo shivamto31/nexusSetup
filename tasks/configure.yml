@@ -1,0 +1,11 @@
+---
+
+- name: Add the OS specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: changing nginx default page
+  template:
+    src: "index.html.j2"
+    dest: "{{ html_path }}"
+  notify:
+    - restart nginx

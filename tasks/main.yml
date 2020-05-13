@@ -1,0 +1,12 @@
+---
+
+- name: Installation in Debian os family
+  include: debian.yml
+  when: ansible_os_family == "Debian"
+
+- name: Installation in RedHat os family
+  include: redhat.yml
+  when: ansible_os_family == "RedHat"
+
+- name: updating the index page
+  include: configure.yml

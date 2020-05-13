@@ -1,0 +1,13 @@
+---
+
+- name: Installiing epel-release on centos 
+  yum:
+    name: "epel-release"
+    state: present
+
+
+- name: Installiing nginx on centos 
+  yum:
+    name: "nginx"
+    state: present
+  
