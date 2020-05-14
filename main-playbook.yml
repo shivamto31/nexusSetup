@@ -2,6 +2,7 @@
 
 - name: this playbook calling nginx role
   hosts: localhost
+  connection: local
   become: yes
   roles:
     - nginxSetup
